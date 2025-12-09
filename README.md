@@ -75,6 +75,20 @@ Some improvements I would like to add in the future include:
 ## Screenshots (Desktop and Mobile)
 
 
+### Desktop – Main Dashboard
+![Desktop Main View](screenshots/desktop-main.png)
+
+
+### Desktop – Multi-Day Temperature Trends
+![Multi-Day Bar Chart](screenshots/desktop-bar-chart.png)
+
+
+### Desktop – 24-Hour Temperature Forecast
+![24-Hour Line Chart](screenshots/desktop-line-chart.png)
+
+
+### Mobile View
+![Mobile View](screenshots/mobile-view.png)
 
 
 ---
