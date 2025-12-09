@@ -2,10 +2,7 @@
 /*
     Weather Forecast Dashboard
     Author: Jos Thomas
-    Spring 2023
-
-    Description:
-    Front-end weather dashboard using Open-Meteo and Chart.js.
+    Description: Front-end weather dashboard using Open-Meteo and Chart.js.
 */
 
 
