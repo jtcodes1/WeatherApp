@@ -1,0 +1,192 @@
+/* Dark theme for Weather Forecast Dashboard */
+
+
+:root {
+    /* Core background tones */
+    --bg-main: #05030a;          /* Almost black, royal purple */
+    --bg-card: #0c0818;          /* Deep violet card base */
+    --bg-card-glow: #120c26;     /* Subtle purple glow layer */
+
+    /* Main accent colors used for buttons */
+    --accent-primary: #6a5cff;  /* GitHub inspired purple */
+    --accent-soft: rgba(106, 92, 255, 0.18);
+    --accent-glow: rgba(106, 92, 255, 0.35);
+
+    /* Text accents */
+    --text-main: #f3f4ff;       /* Soft near white lavender */
+    --text-muted: #9b9fc4;      /* Muted cool grayish purple */
+
+    /* Structural UI */
+    --border-color: #1c1433;
+    --radius: 16px;
+    --shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
+
+    --max-width: 960px;
+}
+
+/* Global reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body layout */
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, #140d2b 0%, #05030a 65%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* App container */
+
+.app-container {
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.04em;
+}
+
+.subtitle {
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Search controls */
+
+.search-section {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+#city-input {
+    padding: 11px 16px;
+    width: 270px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: #080512;
+    color: var(--text-main);
+    outline: none;
+}
+
+#city-input::placeholder {
+    color: #6f73a3;
+}
+
+button {
+    padding: 11px 16px;
+    margin-left: 6px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: #0c0820;
+    color: var(--text-main);
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+}
+
+button:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 1px var(--accent-glow);
+    transform: translateY(-1px);
+}
+
+#status-message {
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Card layout */
+
+.card {
+    background:
+        radial-gradient(circle at top left,
+            var(--bg-card-glow),
+            var(--bg-card));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px 24px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.card h2 {
+    margin-bottom: 14px;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+}
+
+/* Current weather */
+
+.current-weather-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    align-items: center;
+}
+
+.big-temp {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.current-stats p {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+/* Small text */
+
+.tiny-note {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin-bottom: 6px;
+}
+
+/* Mobile layout*/
+
+@media (max-width: 640px) {
+    .current-weather-grid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #city-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin: 4px 2px;
+    }
+}
+
+/* Hard mobile safety for charts */
+.card canvas {
+    max-width: 100%;
+    width: 100% !important;
+    display: block;
+}
