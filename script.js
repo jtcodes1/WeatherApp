@@ -256,8 +256,8 @@ function updateCurrentWeather(label, data) {
     currentTempEl.textContent = formatTemp(tempC);
     currentFeelsEl.textContent = formatTemp(tempC);
 
-    // Free API doesn't provide humidity
-    currentHumidityEl.textContent = "Live";
+    // Free version of the API does not provide humidity
+    currentHumidityEl.textContent = "Not available";
     currentWindEl.textContent = `${wind} m/s`;
 
     unitBtn.textContent = currentUnit === "F" ? "°F → °C" : "°C → °F";
@@ -273,9 +273,9 @@ function updateForecastChart(data) {
     
     // Get the next 24 temperature values (in Celsius from the API)
     const tempsC = data.hourly.temperature_2m.slice(0, 24);
-    
+
     // Convert to Fahrenheit if needed
-     const temps = currentUnit === "F" ? tempsC.map(cToF) : tempsC;
+    const temps = currentUnit === "F" ? tempsC.map(cToF) : tempsC;
     
     // Convert timestamps into readable hour labels
     const labels = data.hourly.time.slice(0, 24).map(t => {
@@ -345,10 +345,8 @@ function updateHistoryChart(data) {
             maintainAspectRatio: true,  // Keeps the chart from stretching weirdly
             animation: false            // Disables animation for smoother updates
         }
-        }
     });
 }
-
 
 // Initial page state
 
