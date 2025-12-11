@@ -9,12 +9,25 @@
 
   <!-- Footer styles (uses your existing CSS variables if defined in style.css) -->
   <style>
-    /* base footer layout */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .app-container {
+      flex: 1; /* pushes footer downward */
+    }
+    
+    /* REMOVE max-width so footer stops shrinking */
     .site-footer {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0rem 1rem 1rem;
-      font-size: 0.78rem;
+      width: 100%;
+      padding: 1rem 0;
       text-align: center;
     }
     
