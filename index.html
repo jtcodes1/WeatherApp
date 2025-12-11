@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        /* base footer layout */
+        .site-footer {
+          max-width: var(--max-width);
+          margin: 0 auto;
+          padding: 0rem 1rem 1rem;
+          font-size: 0.78rem;
+          text-align: center;
+        }
+        
+        /* footer base, soft glow + transition */
+        .footer-wrapper {
+          color: var(--text-muted);
+          display: inline-block;
+          transition:
+            color 0.3s ease,
+            text-shadow 0.3s ease,
+            transform 0.22s ease;
+          text-shadow:
+            0 0 4px rgba(120, 100, 200, 0.25);
+        }
+        
+        /* footer hover, purple glow + slight lift */
+        .footer-wrapper:hover {
+          color: #c8b5ff;
+          text-shadow:
+            0 0 6px rgba(163, 113, 247, 0.6),
+            0 0 12px rgba(163, 113, 247, 0.4);
+          transform: translateY(-2px);
+          cursor: default;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Weather Forecast Dashboard</title>
 
@@ -78,8 +110,10 @@
     </div>
     
     <!-- Footer -->
-    <footer class="footer">
-      © 2025 Jos Thomas. Built with HTML, CSS & JavaScript. Hosted on GitHub Pages.
+    <footer class="site-footer">
+      <div class="footer-wrapper">
+        © <span id="year"></span> Jos Thomas. Built with HTML &amp; CSS and hosted on GitHub Pages.
+      </div>
     </footer>
 
     <!-- Main JavaScript File -->
