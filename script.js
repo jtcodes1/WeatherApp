@@ -352,3 +352,8 @@ unitBtn.textContent = "°F → °C";
 
 // Initial status message before a city is searched
 setStatus("Enter a city or use your location to begin. Default unit: °F");
+
+// Default City for loading up on
+window.addEventListener("load", () => {
+    fetchWeatherByCity("Chicago");  // Change to any city for new default
+});
