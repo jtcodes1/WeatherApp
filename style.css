@@ -1,6 +1,5 @@
 /* Dark theme for Weather Forecast Dashboard */
 
-
 :root {
     /* Core background tones */
     --bg-main: #05030a;          /* Almost black, royal purple */
@@ -40,9 +39,8 @@ body {
         radial-gradient(circle at top, #140d2b 0%, #05030a 65%);
     color: var(--text-main);
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
     padding: 24px;
+    /* IMPORTANT: no flex here */
 }
 
 /* App container */
@@ -50,6 +48,7 @@ body {
 .app-container {
     width: 100%;
     max-width: var(--max-width);
+    margin: 0 auto;   /* center the app */
 }
 
 /* Header */
@@ -166,7 +165,7 @@ button:hover {
     margin-bottom: 6px;
 }
 
-/* Mobile layout*/
+/* Mobile layout */
 
 @media (max-width: 640px) {
     .current-weather-grid {
@@ -190,5 +189,3 @@ button:hover {
     width: 100% !important;
     display: block;
 }
-
-
