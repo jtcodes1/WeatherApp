@@ -191,28 +191,4 @@ button:hover {
     display: block;
 }
 
-.footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 18px 0;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    border-top: 1px solid var(--border-color);
-    opacity: 0.85;
-
-    /* subtle purple glow */
-    text-shadow: 0 0 8px var(--accent-soft);
-
-    /* animation + hover lift */
-    transition:
-        transform 0.18s ease,
-        text-shadow 0.18s ease,
-        opacity 0.18s ease;
-}
-
-.footer:hover {
-    transform: translateY(-2px);
-    text-shadow: 0 0 12px var(--accent-primary);
-    opacity: 1;
-}
 
